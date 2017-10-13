@@ -16,6 +16,7 @@ public class LandingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_landing);
 
         getButton();
+        bindFunctionality();
     }
 
     void getButton() {

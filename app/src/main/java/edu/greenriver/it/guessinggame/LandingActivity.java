@@ -1,4 +1,11 @@
 package edu.greenriver.it.guessinggame;
+/**
+ * This is an application that runs a number guessing game
+ * This activity acts as the landing page
+ *
+ * @author Elizabeth Benner
+ * @version 1.0
+ */
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -19,10 +26,16 @@ public class LandingActivity extends AppCompatActivity {
         bindFunctionality();
     }
 
+    /**
+     * Save the start button to a variable to be accessed by the click listener
+     */
     void getButton() {
         start = (Button) findViewById(R.id.startButton);
     }
 
+    /**
+     * Set the click listener for the button, sends user to GuessingActivity when clicked
+     */
     void bindFunctionality() {
         start.setOnClickListener(new View.OnClickListener() {
             @Override

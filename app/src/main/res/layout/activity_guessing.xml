@@ -7,7 +7,7 @@
     tools:context="edu.greenriver.it.guessinggame.GuessingActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/promptText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess a number between 1 and 20"
@@ -41,7 +41,7 @@
         android:hint="Enter a number"
         android:inputType="number"
         app:layout_constraintRight_toLeftOf="@+id/submitButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/promptText"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
 

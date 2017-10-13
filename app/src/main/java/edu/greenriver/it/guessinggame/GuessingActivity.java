@@ -1,5 +1,6 @@
 package edu.greenriver.it.guessinggame;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -41,10 +42,15 @@ public class GuessingActivity extends AppCompatActivity {
 
                     if(guessNumber > targetNumber) {
                         highGuessToast();
+                        guessCount += 1;
                     } else if (guessNumber < targetNumber) {
                         lowGuessToast();
+                        guessCount += 1;
                     } else if (guessNumber == targetNumber) {
                         successToast();
+                        guessCount += 1;
+                        String finalCount = Integer.toString(guessCount);
+
                     }
                 }
 
@@ -66,5 +72,11 @@ public class GuessingActivity extends AppCompatActivity {
 
     void successToast() {
         Toast.makeText(this, "Yay, you guessed it!", Toast.LENGTH_SHORT).show();
+    }
+
+    void sendSuccess(String finalCount) {
+        Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
+        intent.putExtra("intentCount", finalCount);
+        startActivity(intent);
     }
 }

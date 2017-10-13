@@ -50,6 +50,7 @@ public class GuessingActivity extends AppCompatActivity {
                         successToast();
                         guessCount += 1;
                         String finalCount = Integer.toString(guessCount);
+                        sendSuccess(finalCount);
 
                     }
                 }
